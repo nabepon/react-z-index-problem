@@ -1,0 +1,218 @@
+/******************************************
+ * root
+ ******************************************/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-left: 4px;
+  text-align: center;
+}
+
+.root{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+button {
+  height: 40px;
+  padding: 0 20px;
+}
+
+
+i{
+  display: block;
+  padding: 8px;
+}
+
+/* clearfix */
+.header:after,
+.footer:after{
+  content: '';
+  display: block;
+  clear: both;
+  heigth: 0;
+  width: 0;
+}
+
+/******************************************
+ * header
+ ******************************************/
+.header{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 20px;
+  background-color: antiquewhite;
+  visibility: visible;
+  /*transform: translate(0, -100%);*/
+  transition: transform 400ms ease;
+}
+
+.header.isReady {
+  position: fixed;
+  visibility: hidden;
+  transform: translate(0, -100%);
+  z-index: 1;
+}
+
+.header.isFixed {
+  position: fixed;
+  visibility: visible;
+  transform: translate(0, 0%);
+  z-index: 1;
+}
+
+.headerText{
+  float: left;
+}
+
+.btns {
+  float: right;
+}
+
+/******************************************
+ * info
+ ******************************************/
+.infoList{
+  position: absolute;
+  overflow: hidden;
+  top: 72px;
+  left: 20px;
+  right: 20px;
+  height: 0;
+  transition: height 400ms ease;
+  background-color: aquamarine;
+}
+.isOpen.infoList{
+  height: 80vh;
+}
+
+/******************************************
+ * footer
+ ******************************************/
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 20px;
+  background-color: aqua;
+}
+
+/******************************************
+ * drawerMenu
+ ******************************************/
+.drawerMenu{
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.drawerBg{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 24, 24, 0.71);
+  opacity: 0;
+  transition: opacity 400ms linear;
+}
+
+.drawerContent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  transform: translate(100%, 0%);
+  transition: transform 400ms ease;
+}
+
+.isOpen.drawerMenu {
+  visibility: visible;
+}
+.isOpening.drawerMenu {
+  visibility: visible;
+}
+.isOpen .drawerBg {
+  opacity: 1;
+}
+.isOpen .drawerContent {
+  transform: translate(0%, 0%);
+}
+
+/******************************************
+ * modal
+ ******************************************/
+.modalComponent {
+  z-index: 10;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.modalBg{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 24, 24, 0.71);
+  opacity: 0;
+  transition: opacity 400ms linear;
+}
+
+.modalContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 70%;
+  background-color: #fff;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 400ms ease;
+}
+
+.isOpen.modal {
+  visibility: visible;
+}
+.isOpening.modal {
+  visibility: visible;
+}
+.isOpen .modalBg {
+  opacity: 1;
+}
+.isOpen .modalContent {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modalComponent {
+  position: relative;
+}
+/******************************************
+ * main
+ ******************************************/
+.main {
+  color: #ccc;
+}
+.btnNext {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  right: 0;
+}

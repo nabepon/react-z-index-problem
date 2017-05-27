@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>React z-index problem</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="root">
+  <header class="header">
+    <div class="headerText">header</div>
+    <div class="btns">
+      <button class="btnInfoList">InfoList</button>
+      <button class="btnDrawerMenu">DrawerMenu</button>
+    </div>
+    <ul class="infoList">
+      <li>-</li><li>-</li>
+      <li>-</li><li>-</li>
+    </ul>
+  </header>
+  <main class="main">
+    <i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i>
+    <i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i>
+    <div class="modalComponent">
+      <button class="btnModal">Modal</button><br/>
+      <div class="modal">
+        <div class="modalBg"></div>
+        <div class="modalContent">
+          <ul>
+            <li>-</li><li>-</li>
+            <li>-</li><li>-</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i>
+    <i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i>
+    <i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i><i>main</i>
+  </main>
+  <footer class="footer">footer</footer>
+  <div class="drawerMenu">
+    <div class="drawerBg"></div>
+    <div class="drawerContent">
+      <ul>
+        <li>-</li><li>-</li>
+        <li>-</li><li>-</li>
+      </ul>
+    </div>
+  </div>
+  <button class="btnNext">Next 0</button>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
